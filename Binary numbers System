@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+//  Octa to Binary 
+
+int main() {
+
+
+    int num, rem, ans = 0, mul = 1 , finalans = 0 , rem2 , mul2 = 1;
+    cout << "Enter Your Input : " << endl;
+    cin >> num;
+    while(num > 0){
+    // reminder 
+    rem = num % 10;
+    // division 
+    num = num/10;
+    // formula
+    ans = rem * mul + ans;
+    mul *= 8;
+
+    }
+    cout << ans << endl;
+
+while(ans > 0){
+
+    rem2 = ans % 2;
+    ans = ans/2;
+    finalans += rem2 * mul2;
+    mul2*= 10;
+    
+
+
+}
+
+
+
+cout << "The Binary form is : "<< finalans << endl;
+
+
+    return 0;
+}
