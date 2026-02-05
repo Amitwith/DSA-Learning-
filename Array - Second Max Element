@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+
+
+// Find Second Max
+int main() {
+
+    int arr[6] = {2,6,7,5,8,9};
+    int firstMax = INT_MIN;
+    int secondMax = INT_MIN;
+    for(int i = 0; i < 7; i++) {
+        if(firstMax < arr[i])
+            firstMax = arr[i];
+    }
+    for(int i = 0; i < 7; i++) {
+
+        if(firstMax != arr[i]) {
+
+            if(secondMax < arr[i])
+                secondMax = arr[i];
+
+        }
+
+
+    }
+
+      cout << "The Second Max is " <<  secondMax << endl;
+
+
+
+    return 0;
+}
