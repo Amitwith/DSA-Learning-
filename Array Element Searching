@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+
+int searching(int arr[], int num ,int Element) {
+
+    for(int i = 0; i < num; i++) {
+
+        if(arr[i]== Element)
+            return i;
+    }
+
+    return -1;
+}
+
+// Searching a Element
+int main() {
+
+    int arr[100];
+    int num, Element;
+    cout << "Enter Number of Element : " << endl;
+    cin >> num;
+    for(int i = 0; i < num; i++) {
+        cin >> arr[i];
+    }
+    cout << "Enter Searching Element : " << endl;
+    cin >> Element;
+    
+   cout << searching(arr ,num ,Element) << endl; 
+
+    return 0;
+}
